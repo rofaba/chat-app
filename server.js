@@ -6,6 +6,12 @@ const app = express();
 const httpServer = new HttpServer(app);
 const io = new IOServer(httpServer);
 
+ const messages = [
+    { author: "Chat_Bot", text: "Bienvenido" }   
+ ];
+ app.use(express.static("public"));
+const PORT = 8080;
+
 io.on('connection',socket => {
     console.log('Un cliente se ha conectado');
     socket.emit('messages', messages);
@@ -16,14 +22,10 @@ io.on('connection',socket => {
     });
  });
 
-const messages = [
-    { author: "Juan", text: "¡Hola! ¿Que tal?" },
-    { author: "Pedro", text: "¡Muy bien! ¿Y vos?" },
-    { author: "Ana", text: "¡Genial!" },
-];
 
-app.use(express.static("public"));
-let PORT = process.env.PORT || 8080
+
+
+
 
 httpServer.listen(PORT, function () {
     console.log(`Servidor corriendo en puerto ${PORT}`);
