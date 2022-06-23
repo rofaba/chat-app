@@ -1,0 +1,17 @@
+{
+  "name": "socket-bubu",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "express-socket": "^1.0.38",
+    "socket.io": "^4.5.1"
+  }
+}

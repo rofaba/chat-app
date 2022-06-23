@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="/socket.io/socket.io.js"></script>
+    
+
+    <title> App - Socket </title>
+</head>
+<body>
+    <h1>Mi app chat </h1>
+
+    <div id="messages"> mensajes </div>
+
+    <form onsubmit = "return addMessage(this)">
+        <input type = "text" id="username" placeholder="Tu Nombre" >
+        <input type = "text" id="texto" placeholder="Cuéntanos algo...">
+        <input type = "submit" value="Enviar">
+    </form>
+
+
+<script src="/main.js"></script>      
+</body>
+</html>
