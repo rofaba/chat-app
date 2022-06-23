@@ -10,7 +10,8 @@ const io = new IOServer(httpServer);
     { author: "Chat_Bot", text: "Bienvenido" }   
  ];
  app.use(express.static("public"));
-const PORT = 8080;
+ 
+const PORT = process.env.PORT || 8080;
 
 io.on('connection',socket => {
     console.log('Un cliente se ha conectado');
